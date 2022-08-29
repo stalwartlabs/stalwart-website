@@ -16,14 +16,14 @@ toc: true
 
 ## Overview
 
-Local Mail Transfer Protocol (__LMTP__) is a network protocol defined in [RFC 2033](https://datatracker.ietf.org/doc/html/rfc2033) for transporting 
-mail into systems that do not have a message queue. The LMTP protocol is practically identical to the SMTP protocol with its service extensions, 
-except a few changes. Despite the similarities, it should not be used on public networks or as a replacement for SMTP. In fact, LMTP is most commonly 
-used in combination with SMTP as a delivery mechanism for message stores.
-
 In order to be able to receive emails from the outside world, you need to enable the LMTP service and configure your Mail Transport Agent (MTA)
-to deliver messages to Stalwart JMAP over LMTP. By default the LMTP service is started on port *11200* but it can be changed to use any other port.
-It is important though that the LMTP port is not exposed to the Internet as malicious actors could use it to bypass your SPAM filters. For this reason, 
+to deliver messages to Stalwart JMAP over LMTP. Local Mail Transfer Protocol (__LMTP__) is a network protocol defined in
+[RFC 2033](https://datatracker.ietf.org/doc/html/rfc2033) for transporting mail into systems that do not have a message queue (such as a message store).
+The LMTP protocol is practically identical to the SMTP protocol with its service extensions, except a few changes. Despite the similarities, it should not be used
+on public networks or as a replacement for SMTP. In fact, LMTP is used in combination with SMTP to deliver messages into user mailboxes.
+
+By default Stalwart JMAP listens for LMTP connections on ``127.0.0.1``, port ``11200`` but it can be changed to use any other port.
+It is important though that the LMTP port you choose is not exposed to the Internet as malicious actors could use it to bypass your SPAM filters. For this reason, 
 in systems running on a single node, it is recommended to use the loopback address (``127.0.0.1``) as the bind address and, in multi-node setups, to configure 
 the `lmtp-trusted-ips` parameter.
 
