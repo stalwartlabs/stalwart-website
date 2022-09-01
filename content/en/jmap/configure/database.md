@@ -1,5 +1,5 @@
 ---
-title: "Storage"
+title: "Database"
 description: ""
 date: 2022-08-28T12:49:20Z
 lastmod: 2022-08-28T12:49:20Z
@@ -9,7 +9,7 @@ type: docs
 menu:
   jmap:
     parent: "configure"
-    identifier: "storage"
+    identifier: "database"
 weight: 200
 toc: true
 ---

@@ -27,7 +27,7 @@ It is important though that the LMTP port you choose is not exposed to the Inter
 in systems running on a single node, it is recommended to use the loopback address (``127.0.0.1``) as the bind address and, in multi-node setups, to configure 
 the `lmtp-trusted-ips` parameter.
 
-## Basic configuration
+## Enabling LMTP
 
 In order to enable the LMTP service, the following two parameters have to be configured:
 
@@ -41,7 +41,7 @@ lmtp-bind-addr: 127.0.0.1
 lmtp-port: 11200
 ```
 
-## TLS configuration
+## TLS Configuration
 
 TLS is not necessary when using the loopback address (``127.0.0.1``) as the bind address. In all other cases, it is highly
 recommended to enable TLS:
@@ -59,6 +59,16 @@ lmtp-key-path: /etc/stalwart-jmap/private/lmtp.key
 lmtp-tls-only: true
 ```
 
+If you currently don't have a TLS certificate, you can obtain one for free from [Let's Encrypt](https://letsencrypt.org/).
+Alternatively, you may also generate a self-signed certificate as follows
+
+```
+openssl req -x509 -nodes -days 1825 -newkey rsa:4096 \
+            -subj '/CN=localhost' \ 
+            -keyout /etc/stalwart-jmap/private/lmtp.key \
+            -out /etc/stalwart-jmap/certs/lmtp.crt
+```
+
 ## Trusted IPs
 
 In deployments where the SMTP server does not reside in the same machine as Stalwart JMAP, it is necessary to configure
@@ -72,7 +82,7 @@ Example:
 lmtp-trusted-ips: 192.168.0.1;192.168.0.2
 ``
 
-## MTA configuration
+## MTA Configuration
 
 A Mail Transport Agent with LMTP support is required in order to receive messages from the Internet. Some MTAs that are known
 to have LMTP capabilities are [Postfix](https://www.postfix.org/), [Exim](https://www.exim.org/), [Sendmail](https://www.sendmail.org/) 
@@ -144,11 +154,6 @@ and save it as ``/usr/sbin/lmtp.py``.
 
 Qmail does not offer LMTP support out of the box. However, you can use the [qmail-lmtp](https://fossies.org/linux/mailman/contrib/qmail-lmtp)
 extension to add LMTP support to your qmail installation.
-
-## Clustering
-
-When running Stalwart JMAP in a high availability [cluster](/jmap/cluster/), LMTP connections are acepted by all
-peers in the cluster and automatically forwarded to the leader over RPC. No additional configurations are required.
 
 ## Conformed RFCs
 

@@ -9,5 +9,3 @@ images: []
 type: docs
 weight: 500
 ---
-
-Hello there
