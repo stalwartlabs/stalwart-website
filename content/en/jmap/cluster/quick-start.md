@@ -44,25 +44,25 @@ To set up the cluster make sure you use the same ``encription-key`` value on all
 IP address and configure on each node the ``seed-nodes`` parameter to include one or multiple IP addresses of the other nodes in the cluster, for example:
 
 - Node 1:
-  ```
+  ```yaml
   rpc-advertise-addr: 192.168.0.101
   seed-nodes: 192.168.0.102
   encryption-key: SECURE_ENCRYPTION_KEY
   ```
 - Node 2:
-  ```
+  ```yaml
   rpc-advertise-addr: 192.168.0.102
   seed-nodes: 192.168.0.101
   encryption-key: SECURE_ENCRYPTION_KEY
   ```
 - Node 3:
-  ```
+  ```yaml
   rpc-advertise-addr: 192.168.0.103
   seed-nodes: 192.168.0.102 ; 192.168.0.101
   encryption-key: SECURE_ENCRYPTION_KEY
   ```
 
-And... __that's it!__ You now running Stalwart JMAP in a high-availability cluster.
+And... __that's it!__ You are now running Stalwart JMAP in a high-availability cluster.
 
 ## Running a Cluster
 
@@ -82,7 +82,7 @@ are executed on the leader over [RPC](/jmap/cluster/rpc/). No additional configu
 
 The following example shows how to start a local cluster for testing purposes directly from the command line:
 
-```
+```bash
 $ /usr/bin/stalwart-jmap --jmap-url=https://localhost:8081 \
                          --jmap-port=8081 \
                          --jmap-cert-path=/etc/stalwart-jmap/certs/jmap.crt \
