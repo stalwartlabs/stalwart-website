@@ -16,11 +16,11 @@ toc: true
 
 ## Overview
 
-Account management is done using CLI command ``account`` which, if executed without parameters,
+Account management is done using the CLI command ``account`` which, if executed without parameters,
 returns the available subcommands:
 
 ```bash
-$ stalwart-cli -u https://jmap.example.org account create
+$ stalwart-cli -u https://jmap.example.org account
 
 Manage user accounts
 
@@ -180,7 +180,7 @@ Account 'jdoe@example.org' successfully updated.
 And, to remove an e-mail alias:
 
 ```bash
-$ stalwart-cli -u https://jmap.example.org account add-alias jdoe@example.org \
+$ stalwart-cli -u https://jmap.example.org account remove-alias jdoe@example.org \
     john@example.org john.doe@example.org
 
 Account 'jdoe@example.org' successfully updated.
@@ -193,5 +193,5 @@ User accounts are removed using the ``account delete`` subcommand. For example:
 ```bash
 $ stalwart-cli -u https://jmap.example.org account delete jdoe@example.org
 
-Account 'jdoe@example.org' successfully delete.
+Account 'jdoe@example.org' successfully deleted.
 ```
