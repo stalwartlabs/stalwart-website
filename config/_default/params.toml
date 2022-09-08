@@ -4,7 +4,7 @@
 title = "Stalwart"
 titleSeparator = "-"
 titleAddition = "Stalwart Mail Server"
-description = "Doks is a Hugo theme for building secure, fast, and SEO-ready documentation websites, which you can easily update and customize."
+description = "Stalwart is a scalable, secure and fast mail server with JMAP and IMAP support."
 
 ## Documentation
 # docsVersion = "0.3"
@@ -23,9 +23,9 @@ twitterCreator = "@stalwartlabs"
 # schemaType = "Person"
 schemaType = "Organization"
 schemaName = "Stalwart"
-schemaAuthor = "Stalwart Labs"
+schemaAuthor = "Stalwart Labs Ltd."
 schemaAuthorTwitter = "https://twitter.com/stalwartlabs"
-#schemaAuthorLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
+#schemaAuthorLinkedIn = "https://www.linkedin.com/in/stalwartlabs/"
 schemaAuthorGitHub = "https://github.com/stalwartlabs"
 schemaLocale = "en-US"
 schemaLogo = "logo-doks.png"
@@ -65,7 +65,7 @@ defaultImage = "default-image.png" # put in `./assets/images/`
 fillImage = "1270x740 Center" # normalize image size
 
 # Footer
-footer = "Powered by <a class=\"text-muted\" href=\"https://www.netlify.com/\">Netlify</a>, <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a>, and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>"
+footer = "<a class=\"text-muted\" href=\"https://stalw.art/\">Stalwart Labs Ltd.</a> - Made in <span title=\"London, United Kingdom\">🇬🇧</a> & <span title=\"Ljubljana, Slovenia\">🇸🇮</a>"
 
 # Feed
 copyRight = "Copyright (c) Stalwart Labs Ltd."
@@ -74,20 +74,20 @@ copyRight = "Copyright (c) Stalwart Labs Ltd."
 alert = false
 alertDismissable = true
 # alertText = "Introducing the Doks child theme, several DX + UX updates, and more! <a class=\"alert-link stretched-link\" href=\"https://getdoks.org/blog/doks-v0.2/\" target=\"_blank\" rel=\"noopener\">Check out Doks v0.2</a>"
-alertText = "Introducing the Doks child theme, several DX + UX updates, and more! <a class=\"alert-link stretched-link\" href=\"https://getdoks.org/blog/doks-v0.2/\">Check out Doks v0.2</a>"
+#alertText = "Introducing the Doks child theme, several DX + UX updates, and more! <a class=\"alert-link stretched-link\" href=\"https://getdoks.org/blog/doks-v0.2/\">Check out Doks v0.2</a>"
 
 # Edit Page
 # repoHost [Github | Gitea | GitLab | Bitbucket | BitbucketServer ] is used for building the edit link based on git hoster
 repoHost = "GitHub"
 #repoHost = "Gitea"
-docsRepo = "https://github.com/h-enk/doks"
+docsRepo = "https://github.com/stalwartlabs/documentation"
 docsRepoBranch = "master"
 docsRepoSubPath = ""
-editPage = false
+editPage = true
 lastMod = false
 
 [sections]
-  sectionNav = ["docs", "jmap", "guides"]
+  sectionNav = ["jmap", "imap"]
 
 [options]
   lazySizes = true
