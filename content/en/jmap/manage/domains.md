@@ -10,7 +10,7 @@ menu:
   jmap:
     parent: "manage"
     identifier: "domains"
-weight: 300
+weight: 303
 toc: true
 ---
 
@@ -43,7 +43,7 @@ SUBCOMMANDS:
 ## Create
 
 Before user accounts can be created, you first need to add all your organization's domain names. 
-Domain creation is done using the ``domain create`` subcommand. It accepts the following arguments:
+Domain creation is done using the ``domain create`` subcommand, which accepts the following arguments:
 
 ```bash
 Create a new domain

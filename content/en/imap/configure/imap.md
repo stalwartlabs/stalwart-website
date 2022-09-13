@@ -10,14 +10,14 @@ menu:
   imap:
     parent: "configure"
     identifier: "imap-server"
-weight: 200
+weight: 202
 toc: true
 ---
 
 ## Overview
 
 Stalwart IMAP supports both the [IMAP4rev2](https://www.rfc-editor.org/rfc/rfc9051.html) and 
-[IMAP4rev1](https://www.rfc-editor.org/rfc/rfc3501) protocols as well as numerous extensions.
+[IMAP4rev1](https://www.rfc-editor.org/rfc/rfc3501) protocols as well as [numerous extensions](/imap/development/rfc/#imap4-extensions).
 Clients can connect to Stalwart IMAP over two ports; a TLS encrypted port and a clear-text port which
 supports TLS connection upgrades. 
 This section covers the basic IMAP server configuration.
@@ -48,8 +48,8 @@ such as ``AUTH=PLAIN`` or ``LOGIN`` will not be offered to clients.
 The parameters ``cert-path`` and ``key-path`` specify the path to the TLS certificate and private key respectively. For example:
 
 ```
-cert-path: /etc/stalwart-imap/certs/imap.crt
-key-path: /etc/stalwart-imap/private/imap.key
+cert-path: /usr/local/stalwart-imap/etc/imap.crt
+key-path: /usr/local/stalwart-imap/etc/imap.key
 ```
 
 If you currently don't have a TLS certificate, you can obtain one for free from [Let's Encrypt](https://letsencrypt.org/).

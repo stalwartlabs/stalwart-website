@@ -10,7 +10,7 @@ menu:
   jmap:
     parent: "cluster"
     identifier: "gossip"
-weight: 200
+weight: 502
 toc: true
 ---
 
@@ -102,4 +102,4 @@ encryption-key: SECURE_KEY
 ```
 
 It is recommended to generate an encryption key using OpenSSL. Alternatively, in Linux systems the command
-``tr -dc '[:alpha:]' < /dev/urandom | head -c 64`` can be used if OpenSSL is not available.
+``LC_ALL=C tr -dc '[:alpha:]' < /dev/urandom | head -c 64`` can be used if OpenSSL is not available.

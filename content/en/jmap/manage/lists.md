@@ -10,7 +10,7 @@ menu:
   jmap:
     parent: "manage"
     identifier: "lists"
-weight: 500
+weight: 305
 toc: true
 ---
 

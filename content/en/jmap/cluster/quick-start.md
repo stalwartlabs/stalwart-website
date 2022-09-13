@@ -10,7 +10,7 @@ menu:
   jmap:
     parent: "cluster"
     identifier: "quick-start"
-weight: 100
+weight: 501
 toc: true
 ---
 
@@ -21,10 +21,10 @@ third party products. Under the hood, Stalwart JMAP automatically discovers new 
 in the cluster using a gossip protocol similar to [SWIM](https://ieeexplore.ieee.org/document/1028914)
 and keeps each node in sync using the [Raft consensus protocol](https://raft.github.io/raft.pdf).
 
-Main features:
+Key features:
 
 - Node autodiscovery and peer updates over encrypted [gossip protocol](https://en.wikipedia.org/wiki/Gossip_protocol).
-- Adaptive [Phi accrual](https://www.researchgate.net/publication/29682135_The_ph_accrual_failure_detector) failure detection resistant to some types of network partitions.
+- Adaptive [Phi accrual](https://www.researchgate.net/publication/29682135_The_ph_accrual_failure_detector) failure detection resistant to most types of network partitions.
 - Replication and cluster consensus over the [Raft](https://raft.github.io/raft.pdf) protocol.
 - Read-only replicas.
 
@@ -83,28 +83,28 @@ are executed on the leader over [RPC](/jmap/cluster/rpc/). No additional configu
 The following example shows how to start a local cluster for testing purposes directly from the command line:
 
 ```bash
-$ /usr/bin/stalwart-jmap --jmap-url=https://localhost:8081 \
+$ /usr/local/stalwart-jmap/bin/stalwart-jmap --jmap-url=https://localhost:8081 \
                          --jmap-port=8081 \
-                         --jmap-cert-path=/etc/stalwart-jmap/certs/jmap.crt \
-                         --jmap-key-path=/etc/stalwart-jmap/private/jmap.key \
+                         --jmap-cert-path=/usr/local/stalwart-jmap/etc/certs/jmap.crt \
+                         --jmap-key-path=/usr/local/stalwart-jmap/etc/private/jmap.key \
                          --encryption-key=SECURE_ENCRYPTION_KEY \
                          --rpc-advertise-addr=127.0.0.1 \
                          --rpc-port=7911 \
                          --seed-nodes=127.0.0.1:7912 &
 
-$ /usr/bin/stalwart-jmap --jmap-url=https://localhost:8082 \
+$ /usr/local/stalwart-jmap/bin/stalwart-jmap --jmap-url=https://localhost:8082 \
                          --jmap-port=8082 \
-                         --jmap-cert-path=/etc/stalwart-jmap/certs/jmap.crt \
-                         --jmap-key-path=/etc/stalwart-jmap/private/jmap.key \
+                         --jmap-cert-path=/usr/local/stalwart-jmap/etc/certs/jmap.crt \
+                         --jmap-key-path=/usr/local/stalwart-jmap/etc/private/jmap.key \
                          --encryption-key=SECURE_ENCRYPTION_KEY \
                          --rpc-advertise-addr=127.0.0.1 \
                          --rpc-port=7912 \
                          --seed-nodes=127.0.0.1:7913 &
 
-$ /usr/bin/stalwart-jmap --jmap-url=https://localhost:8083 \
+$ /usr/local/stalwart-jmap/bin/stalwart-jmap --jmap-url=https://localhost:8083 \
                          --jmap-port=8083 \
-                         --jmap-cert-path=/etc/stalwart-jmap/certs/jmap.crt \
-                         --jmap-key-path=/etc/stalwart-jmap/private/jmap.key \
+                         --jmap-cert-path=/usr/local/stalwart-jmap/etc/certs/jmap.crt \
+                         --jmap-key-path=/usr/local/stalwart-jmap/etc/private/jmap.key \
                          --encryption-key=SECURE_ENCRYPTION_KEY \
                          --rpc-advertise-addr=127.0.0.1 \
                          --rpc-port=7913 \

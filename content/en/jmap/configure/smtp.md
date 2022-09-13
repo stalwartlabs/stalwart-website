@@ -10,7 +10,7 @@ menu:
   jmap:
     parent: "configure"
     identifier: "smtp"
-weight: 200
+weight: 205
 toc: true
 ---
 

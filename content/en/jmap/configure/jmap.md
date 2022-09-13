@@ -10,7 +10,7 @@ menu:
   jmap:
     parent: "configure"
     identifier: "jmap-proto"
-weight: 200
+weight: 207
 toc: true
 ---
 

@@ -10,7 +10,7 @@ menu:
   jmap:
     parent: "manage"
     identifier: "accounts"
-weight: 200
+weight: 302
 toc: true
 ---
 

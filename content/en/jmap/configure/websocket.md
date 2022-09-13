@@ -10,7 +10,7 @@ menu:
   jmap:
     parent: "configure"
     identifier: "websocket"
-weight: 200
+weight: 209
 toc: true
 ---
 

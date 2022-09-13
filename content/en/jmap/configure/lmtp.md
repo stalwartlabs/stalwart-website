@@ -10,7 +10,7 @@ menu:
   jmap:
     parent: "configure"
     identifier: "lmtp"
-weight: 200
+weight: 204
 toc: true
 ---
 
@@ -54,8 +54,8 @@ recommended to enable TLS:
 Example:
 
 ```
-lmtp-cert-path: /etc/stalwart-jmap/certs/lmtp.crt
-lmtp-key-path: /etc/stalwart-jmap/private/lmtp.key
+lmtp-cert-path: /usr/local/stalwart-jmap/etc/certs/lmtp.crt
+lmtp-key-path: /usr/local/stalwart-jmap/etc/private/lmtp.key
 lmtp-tls-only: true
 ```
 
@@ -65,8 +65,8 @@ Alternatively, you may also generate a self-signed certificate as follows
 ```
 openssl req -x509 -nodes -days 1825 -newkey rsa:4096 \
             -subj '/CN=localhost' \ 
-            -keyout /etc/stalwart-jmap/private/lmtp.key \
-            -out /etc/stalwart-jmap/certs/lmtp.crt
+            -keyout /usr/local/stalwart-jmap/etc/private/lmtp.key \
+            -out /usr/local/stalwart-jmap/etc/certs/lmtp.crt
 ```
 
 ## Trusted IPs

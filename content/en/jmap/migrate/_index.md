@@ -10,4 +10,3 @@ type: docs
 weight: 400
 ---
 
-Hello there

@@ -10,7 +10,7 @@ menu:
   jmap:
     parent: "cluster"
     identifier: "rpc"
-weight: 400
+weight: 504
 toc: true
 ---
 
@@ -46,8 +46,8 @@ TLS is considered mandatory and has to be configured in order to enable the RPC 
 The parameters ``rpc-cert-path`` and ``rpc-key-path`` specify the path to the TLS certificate and private key respectively. For example:
 
 ```
-rpc-cert-path: /etc/stalwart-jmap/certs/rpc.crt
-rpc-key-path: /etc/stalwart-jmap/private/rpc.key
+rpc-cert-path: /usr/local/stalwart-jmap/etc/certs/rpc.crt
+rpc-key-path: /usr/local/stalwart-jmap/etc/private/rpc.key
 ```
 
 If you currently don't have a TLS certificate, you can obtain one for free from [Let's Encrypt](https://letsencrypt.org/).
@@ -56,8 +56,8 @@ Alternatively, you may also generate a self-signed certificate as follows
 ```
 openssl req -x509 -nodes -days 1825 -newkey rsa:4096 \
             -subj '/CN=localhost' \ 
-            -keyout /etc/stalwart-jmap/private/rpc.key \
-            -out /etc/stalwart-jmap/certs/rpc.crt
+            -keyout /usr/local/stalwart-jmap/etc/private/rpc.key \
+            -out /usr/local/stalwart-jmap/etc/certs/rpc.crt
 ```
 
 The ``rpc-tls-domain`` *(soon to be deprecated)* parameter allows to specify the TLS domain name to use when connecting to

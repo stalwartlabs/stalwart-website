@@ -10,7 +10,7 @@ menu:
   imap:
     parent: "configure"
     identifier: "proxy"
-weight: 300
+weight: 203
 toc: true
 ---
 

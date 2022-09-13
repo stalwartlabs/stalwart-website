@@ -10,7 +10,7 @@ menu:
   jmap:
     parent: "configure"
     identifier: "database"
-weight: 200
+weight: 203
 toc: true
 ---
 
@@ -26,22 +26,22 @@ stored separately from metadata, directly in the file system to allow quick reco
 ## Configuration
 
 The path to where both RocksDB tables and blobs are stored is configured with the ``db-path`` parameter and its default
-value is ``/var/lib/stalwart-jmap``. Under this path, RocksDB tables are stored under the ``idx`` directory and blobs
+value is ``/usr/local/stalwart-jmap/data``. Under this path, RocksDB tables are stored under the ``idx`` directory and blobs
 under ``blobs``.
 
 Example:
 
 ```
-db-path: /var/lib/stalwart-jmap
+db-path: /usr/local/stalwart-jmap/data
 ```
 
 ## Blobs
 
-Binary large objects (blobs) can be stored depending on their type either on RocksDB or directly in the filesystem.
+Binary large objects (blobs) are stored, depending on their type, either on RocksDB or directly in the filesystem.
 Metadata blobs such as parsed e-mail headers and full text term indexes are stored in RocksDB while e-mail messages
 are stored in the file system using a nested directory structure.
 
-The following parameters can be configured:
+The following blob storage parameters can be configured:
 
 - ``blob-nested-levels``: Number of nested subdirectories to use to distribute blobs in the file system. For example a value of 1 will store blobs under ``<db-path>/blobs/<l1>`` while a value of 3 will store blobs under ``<db-path>/blobs/<l1>/<l2>/<l3>`` where l1, l2, ..., ln is the hexadecimal representation of an 8 bits hash. The default value is 2.
 - ``blob-min-size``: For metadata blobs, the minimum size in bytes that RocksDB will use to store a blob outside the key-value store. For example, a value of 1024 will keep blobs under 1024 bytes in the key value store and any blobs larger than 1024 bytes will be stored in the file system. Defaults to 16384 bytes.
@@ -98,7 +98,7 @@ schedule-compact-db: 0 4 * # min hour week-day
 The log snapshot job creates a snapshot containing old Raft log entries and JMAP States. Raft logs are used in distributed environments while JMAP states are
 used to keep track of changes to JMAP objects.
 
-It is configured with the ``schedule-snapshot-log`` parameter and the default schedule is to run every day at 3:45 am (``45 3 *``). 
+The snapshot schedule is configured with the ``schedule-snapshot-log`` parameter and the default setting is to run every day at 3:45 am (``45 3 *``). 
 Additionally, this job takes the ``max-changelog-entries`` parameter which determines the maximum amount of recent log entries to
 keep and all previous entries exceeding this limited are added to the snapshot (defaults to 10000 entries).
 
@@ -115,7 +115,7 @@ Stalwart JMAP keeps track of the number of JMAP objects linked to a particular b
 the blob is tombstoned (marked for deletion). The blob cleanup job takes care of removing these tombstoned blobs as well as
 all expired blobs (see ``blob-temp-ttl`` above) from the file system. 
 
-It is configured with the ``schedule-purge-blobs`` parameter and the default schedule is to run every day at 3:30 am (``30 3 *``). 
+The job schedule is configured with the ``schedule-purge-blobs`` parameter and the default setting is to run every day at 3:30 am (``30 3 *``). 
 
 Example:
 
@@ -130,7 +130,7 @@ process is performed in batches from a housekeeper task. Once an account is dele
 anymore but all their data won't be deleted until later. The purge accounts task permanently removes from the database all information
 linked to the accounts that had been scheduled for deletion.
 
-It is configured with the ``schedule-purge-accounts`` parameter and the default schedule is to run every day at 3 am (``0 3 *``). 
+The account purge schedule is configured with the ``schedule-purge-accounts`` parameter and the default setting is to run every day at 3 am (``0 3 *``). 
 
 Example:
 

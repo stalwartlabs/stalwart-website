@@ -10,7 +10,7 @@ menu:
   jmap:
     parent: "configure"
     identifier: "rate-limit"
-weight: 200
+weight: 210
 toc: true
 ---
 

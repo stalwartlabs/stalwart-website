@@ -10,7 +10,7 @@ menu:
   jmap:
     parent: "migrate"
     identifier: "migrate-accounts"
-weight: 200
+weight: 402
 toc: true
 ---
 

@@ -10,7 +10,7 @@ menu:
   jmap:
     parent: "migrate"
     identifier: "migrate-mailboxes"
-weight: 300
+weight: 403
 toc: true
 ---
 

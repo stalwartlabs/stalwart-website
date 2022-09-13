@@ -10,7 +10,7 @@ menu:
   jmap:
     parent: "cluster"
     identifier: "raft"
-weight: 300
+weight: 503
 toc: true
 ---
 
@@ -60,7 +60,7 @@ raft-commit-timeout: 1000 # ms
 
 ## Batches
 
-Raft requests are sent over [RFC](/cluster/rpc/) and grouped in batches to optimize network resources.
+Raft requests are sent over [RPC](/cluster/rpc/) and grouped in batches to optimize network resources.
 The size in bytes of each batch is configured with the ``raft-batch-max`` parameter and the default value
 is 10485760 bytes (100 MB).
 

@@ -10,7 +10,7 @@ menu:
   imap:
     parent: "configure"
     identifier: "cache"
-weight: 400
+weight: 204
 toc: true
 ---
 
@@ -32,12 +32,12 @@ IMAP clients to resynchronize all folders and messages with the server.
 ## Configuration
 
 The path to where cache resides in the file system is configured with the ``cache-dir`` parameter and its default
-value is ``/var/lib/stalwart-imap``.
+value is ``/usr/local/stalwart-imap/data``.
 
 Example:
 
 ```
-db-path: /var/lib/stalwart-jmap
+db-path: /usr/local/stalwart-imap/data
 ```
 
 ## Maintenance

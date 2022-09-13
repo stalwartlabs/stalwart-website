@@ -10,7 +10,7 @@ menu:
   jmap:
     parent: "manage"
     identifier: "groups"
-weight: 400
+weight: 304
 toc: true
 ---
 

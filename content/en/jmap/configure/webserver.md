@@ -10,7 +10,7 @@ menu:
   jmap:
     parent: "configure"
     identifier: "general"
-weight: 200
+weight: 202
 toc: true
 ---
 
@@ -54,8 +54,8 @@ proxy that encrypts all incoming HTTP connections.
 The parameters ``jmap-cert-path`` and ``jmap-key-path`` specify the path to the TLS certificate and private key respectively. For example:
 
 ```
-jmap-cert-path: /etc/stalwart-jmap/certs/jmap.crt
-jmap-key-path: /etc/stalwart-jmap/private/jmap.key
+jmap-cert-path: /usr/local/stalwart-jmap/etc/certs/jmap.crt
+jmap-key-path: /usr/local/stalwart-jmap/etc/private/jmap.key
 ```
 
 If you currently don't have a TLS certificate, you can obtain one for free from [Let's Encrypt](https://letsencrypt.org/).

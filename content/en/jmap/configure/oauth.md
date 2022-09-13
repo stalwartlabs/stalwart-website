@@ -10,7 +10,7 @@ menu:
   jmap:
     parent: "configure"
     identifier: "oauth"
-weight: 200
+weight: 206
 toc: true
 ---
 
@@ -71,7 +71,7 @@ All tokens issued by Stalwart JMAP are cryptographically signed using a mechanis
 
 During installation, a 512 bits long encryption key is automatically generated for you. If you wish
 to replace it, you can generate a new one using OpenSSL or alternatively in Linux systems using the
-command ``tr -dc '[:alpha:]' < /dev/urandom | head -c 64``. Once you have your new key, update the ``encryption-key``
+command ``LC_ALL=C tr -dc '[:alpha:]' < /dev/urandom | head -c 64``. Once you have your new key, update the ``encryption-key``
 parameter, for example:
 
 ```
@@ -83,13 +83,13 @@ It is imporant to be aware that:
 - If the encription key is changed, all existing OAuth tokens will be **immediately revoked**.
 - On distributed systems, all nodes have to use the **exact same encription key**. Otherwise,
   tokens issued in one node will not be valid in other nodes.
-- The encryption key **must to be kept private**, make sure that only the Stalwart JMAP process
+- The encryption key **must be kept private**, make sure that only the Stalwart JMAP process
   has access to the configuration file where it is stored. In Unix systems this can be done
   with the commands:
   
    ```
-   sudo chown stalwart-jmap /etc/stalwart-jmap/config.yml
-   sudo chmod 600 /etc/stalwart-jmap/config.yml
+   sudo chown stalwart-jmap /usr/local/stalwart-jmap/etc/config.yml
+   sudo chmod 600 /usr/local/stalwart-jmap/etc/config.yml
    ``` 
 
 ### Expiration
