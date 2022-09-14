@@ -10,7 +10,7 @@ description = "Stalwart is a scalable, secure and fast mail server with JMAP and
 # docsVersion = "0.3"
 
 ## Open Graph
-images = ["doks.png"]
+images = ["stalwart.png"]
 ogLocale = "en_US"
 domainTLD = "stalw.art"
 titleHome = "Stalwart Labs"
@@ -28,10 +28,10 @@ schemaAuthorTwitter = "https://twitter.com/stalwartlabs"
 #schemaAuthorLinkedIn = "https://www.linkedin.com/in/stalwartlabs/"
 schemaAuthorGitHub = "https://github.com/stalwartlabs"
 schemaLocale = "en-US"
-schemaLogo = "logo-doks.png"
+schemaLogo = "logo-stalwart.png"
 schemaLogoWidth = 512
 schemaLogoHeight = 512
-schemaImage = "doks.png"
+schemaImage = "stalwart.png"
 schemaImageWidth = 1280
 schemaImageHeight = 640
 schemaTwitter = "https://twitter.com/stalwartlabs"
@@ -65,7 +65,7 @@ defaultImage = "default-image.png" # put in `./assets/images/`
 fillImage = "1270x740 Center" # normalize image size
 
 # Footer
-footer = "<a class=\"text-muted\" href=\"https://stalw.art/\">Stalwart Labs Ltd.</a> - Made in <span title=\"London, United Kingdom\">🇬🇧</a> & <span title=\"Ljubljana, Slovenia\">🇸🇮</a>"
+footer = "<a class=\"text-muted\" href=\"https://stalw.art/\">Stalwart Labs Ltd.</a> - Made with <span title=\"Rust\">🦀</a> in <span title=\"London, United Kingdom\">🇬🇧</a>"
 
 # Feed
 copyRight = "Copyright (c) Stalwart Labs Ltd."

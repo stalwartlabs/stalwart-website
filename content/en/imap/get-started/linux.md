@@ -64,6 +64,13 @@ Or, if you are using MacOS:
 sudo launchctl kickstart -k stalwart.imap
 ```
 
+**Important**: On Linux systems, in order to be able to listen on the privileged ports 143 and 993, the Stalwart IMAP
+service needs to run as the ``root`` user (this is not the case in MacOS). To run the service as the ``stalwart-imap`` user,
+edit the ``/etc/systemd/system/stalwart-imap.service`` file and uncomment the ``User`` and ``Group`` parameters.
+Then disable privileged ports with the command ``sudo sysctl -w net.ipv4.ip_unprivileged_port_start=0`` and restart
+the service. Alternatively, you may also bind Stalwart JMAP to an unprivileged port such as 1143 and then forward the connections using
+iptables such as ``iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 143 -j REDIRECT --to-port 1143``.
+
 ## Next Steps
 
 If everything is correct, you should now be able to connect with an IMAP4 client
