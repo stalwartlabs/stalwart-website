@@ -24,7 +24,7 @@ in the [compile section](/jmap/development/compile).
 
 ## Base tests
 
-The base tests perform some basic testing on different functions across the Stalwart JMAP
+The base tests perform basic testing on different functions across the Stalwart JMAP
 code base. To run the base test suite execute:
 
 ```bash

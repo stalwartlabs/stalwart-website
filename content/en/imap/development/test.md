@@ -42,7 +42,6 @@ To run the IMAP test suite execute:
 cargo test imap_tests -- --ignored
 ```
 
-
 ## Third-party tests
 
 Stalwart IMAP's protocol compliance may be also tested with Dovecot's ImapTest:

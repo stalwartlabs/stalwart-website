@@ -11,13 +11,13 @@ type: docs
 
 # Stalwart IMAP Server
 
-Stalwart IMAP is an open-source Internet Message Access Protocol server written in Rust and designed to be secure, fast, robust and scalable.
+Stalwart IMAP is an open-source Internet Message Access Protocol server designed to be secure, fast, robust and scalable.
 A JSON Meta Application Protocol (JMAP) backend such as [Stalwart JMAP](/jmap/) is required to use Stalwart IMAP (in other words, Stalwart
 IMAP is an imap4-to-jmap proxy).
 
 Key features:
 
-- **IMAP4** full compliance including numerous extensions:
+- **IMAP4** full compliance and support for multiple extensions:
   - IMAP4rev2 ([RFC 9051](https://datatracker.ietf.org/doc/html/rfc9051))
   - IMAP4rev1 ([RFC 3501](https://datatracker.ietf.org/doc/html/rfc3501)) 
   - Access Control Lists (ACL) ([RFC 4314](https://datatracker.ietf.org/doc/html/rfc4314))

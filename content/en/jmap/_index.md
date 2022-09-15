@@ -11,7 +11,7 @@ type: docs
 
 # Stalwart JMAP Server
 
-Stalwart JMAP is an open-source JSON Meta Application Protocol server written in Rust and designed to be secure, fast, robust and scalable.
+Stalwart JMAP is an open-source JSON Meta Application Protocol server designed to be secure, fast, robust and scalable.
 JMAP is a modern protocol for synchronising data such as mail, calendars, or contacts that makes much more efficient use of network resources.
 
 Key features:
@@ -31,6 +31,7 @@ Key features:
 - **Secure**:
   - OAuth 2.0 [authorization code](https://www.rfc-editor.org/rfc/rfc8628) and [device authorization](https://www.rfc-editor.org/rfc/rfc8628) flows.
   - Domain Keys Identified Mail ([DKIM](https://www.rfc-editor.org/rfc/rfc6376)) message signing.
+  - Access Control Lists (ACLs).
   - Rate limiting.
   - Memory safe (thanks to Rust).
 - **Scalable and fault-tolerant**:
