@@ -127,7 +127,7 @@ to corrupt the cluster state and/or its data by randomly performimg the followin
 
 Please note that this test runs on a loop and does not stop unless a leader fails to be elected
 or a data corruption problem is found. If something goes wrong while running the tests, 
-all the actions that were executed up to that point will be printed to screen as JSON structure.
+all the actions that were executed up to that point will be printed to screen as a JSON structure.
 This JSON dump can be later used to reproduce and eventually debug the problem.
 
 To run the cluster fuzz test suite execute:
@@ -142,7 +142,7 @@ Support for Jepsen testing is planned and in the roadmap. Until then, the cluste
 
 ## JMAP test suite
 
-Compliance with JMAP protocol may also be tested using Fastmail's JMAP-TestSuite:
+Compliance with the JMAP protocol may also be tested using Fastmail's JMAP-TestSuite:
 
 - Clone the JMAP TestSuite repository:
     ```bash

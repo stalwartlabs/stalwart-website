@@ -26,9 +26,9 @@ docker run -d -ti -p 443:8080 -p 11200:11200 \
            --name stalwart-jmap stalwartlabs/jmap-server:latest \
            --lmtp-bind-addr=0.0.0.0 \
            --jmap-url=https://<JMAP_HOSTNAME> \
-           --jmap-cert-path=<BASE_PATH>/jmap.crt \
-           --jmap-key-path=<BASE_PATH>/jmap.key \
-           --db-path=<BASE_PATH>/data \
+           --jmap-cert-path=/usr/local/stalwart-jmap/jmap.crt \
+           --jmap-key-path=/usr/local/stalwart-jmap/jmap.key \
+           --db-path=/usr/local/stalwart-jmap/data \
            --encryption-key=<RANDOM_KEY>
 ```
 

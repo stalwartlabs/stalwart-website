@@ -49,7 +49,7 @@ Install Stalwart JMAP on your server by following the instructions for your plat
 - [Windows](/jmap/get-started/windows/)
 - [Docker](/jmap/get-started/docker/)
 
-You may also [compile Stalwart JMAP from from the source](/jmap/development/compile/).
+You may also [compile Stalwart JMAP from the source](/jmap/development/compile/).
 
 ## Support
 

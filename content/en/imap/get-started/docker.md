@@ -27,9 +27,9 @@ docker run -d -ti -p 143:1443 -p 993:1993 \
            --bind-port=1443 \
            --bind-port-tls=1993 \
            --jmap-url=https://<JMAP_HOSTNAME> \
-           --cert-path=<BASE_PATH>/imap.crt \
-           --key-path=<BASE_PATH>/imap.key \
-           --cache-dir=<BASE_PATH>/data
+           --cert-path=/usr/local/stalwart-imap/imap.crt \
+           --key-path=/usr/local/stalwart-imap/imap.key \
+           --cache-dir=/usr/local/stalwart-imap/data
 ```
 
 Make sure to:

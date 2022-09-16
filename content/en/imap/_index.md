@@ -43,7 +43,7 @@ Install Stalwart IMAP on your server by following the instructions for your plat
 - [Windows](/imap/get-started/windows/)
 - [Docker](/imap/get-started/docker/)
 
-You may also [compile Stalwart IMAP from from the source](/imap/development/compile/).
+You may also [compile Stalwart IMAP from the source](/imap/development/compile/).
 
 ## Support
 
