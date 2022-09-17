@@ -42,8 +42,8 @@ SUBCOMMANDS:
 
 ## Create
 
-Before user accounts can be created, you first need to add all your organization's domain names. 
-Domain creation is done using the ``domain create`` subcommand, which accepts the following arguments:
+When a new account is created, the CLI tool automatically creates the associated domain name if it is missing.
+Domain creation can also be done using the ``domain create`` subcommand, which accepts the following arguments:
 
 ```bash
 Create a new domain

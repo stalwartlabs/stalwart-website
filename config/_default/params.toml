@@ -1,10 +1,10 @@
 # Meta Data for SEO
 
 ## Homepage
-title = "Stalwart"
+title = "Stalwart Labs"
 titleSeparator = "-"
 titleAddition = "Stalwart Mail Server"
-description = "Stalwart is a scalable, secure and fast mail server with JMAP and IMAP support."
+description = "Stalwart is a scalable, robust, secure and fast mail server with JMAP and IMAP support."
 
 ## Documentation
 # docsVersion = "0.3"

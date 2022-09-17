@@ -37,7 +37,7 @@ value is ``/usr/local/stalwart-imap/data``.
 Example:
 
 ```
-db-path: /usr/local/stalwart-imap/data
+cache-dir: /usr/local/stalwart-imap/data
 ```
 
 ## Maintenance

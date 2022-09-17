@@ -23,23 +23,12 @@ Install Stalwart JMAP server by running the following command in your terminal:
 curl --proto '=https' --tlsv1.2 -sSf https://jmap.stalw.art/install.sh | sudo sh
 ```
 
-This command will install Stalwart JMAP under the ``/usr/local/stalwart-jmap`` folder
-and start the ``stalwart-jmap`` service. Please note that root access is required
-to perform the installation, if you don't feel comfortable running the install script as root
+Once the installation is completed, Stalwart JMAP will be available under the ``/usr/local/stalwart-jmap``
+directory. The installation script will also create the ``stalwart-jmap`` account and start the ``stalwart-jmap`` systemd/launchd service.
+
+Please note that _root access_ is required to perform the installation, if you don't feel comfortable running the install script as root
 you may also [download the latest release](https://github.com/stalwartlabs/jmap-server/releases) and
 perform a manual installation.
-
-In order to manage your Stalwart JMAP instance, you are also going to need to install the Stalwart CLI (command line interface).
-The CLI tool can be installed by executing the following command either on the same server where Stalwart JMAP 
-is running or any other computer with internet access to your server:
-
-```bash
-curl --proto '=https' --tlsv1.2 -sSf https://jmap-client.stalw.art/install.sh | sh
-```
-
-Once the installation is completed, the CLI tool will be available in your home directory at ``$HOME/.stalwart/stalwart-cli``. You may add the
-``$HOME/.stalwart`` directory to your ``PATH`` environment variable or move the ``stalwart-cli`` binary to a location that is already
-on your ``PATH`` variable.
 
 ## Set up
 
@@ -116,10 +105,10 @@ If everything is correct, you should now be able to access the OAuth login scree
 
 For security reasons, it is very important that you change the default administrator password before your JMAP server starts 
 accepting connections from the outside world. The default administrator account is ``admin`` with password ``changeme``, which can 
-be changed using the following CLI command:
+be changed using the following Stalwart Command Line Interface (CLI) tool command:
 
 ```bash
-stalwart-cli -u https://YOUR_HOSTNAME -c changeme account update admin -p NEW_PASSWORD
+/usr/local/stalwart-jmap/bin/stalwart-cli -u https://YOUR_HOSTNAME -c changeme account update admin -p NEW_PASSWORD
 ```
 
 ## Next steps

@@ -56,14 +56,21 @@ the [SMTP relay section](/jmap/configure/smtp). Additionally, it is recommended 
 ## Install CLI
 
 In order to manage your Stalwart JMAP instance, you are also going to need to install the Stalwart CLI (command line interface).
-The CLI tool can be installed on **Linux / MacOS** systems by executing the following command either on the same server where Stalwart JMAP 
+The CLI tool can be installed by following these instructions on the same server where Stalwart JMAP 
 is running or any other computer with internet access to your server:
 
-```bash
-curl --proto '=https' --tlsv1.2 -sSf https://jmap-client.stalw.art/install.sh | sh
-```
+- **Linux / MacOS**: 
 
-On **Windows** download the CLI tool directly from [here](https://github.com/stalwartlabs/jmap-server-cli/releases/latest/download/stalwart-cli-x86_64-pc-windows-msvc.zip).
+    ```bash
+    curl --proto '=https' --tlsv1.2 -sSf https://jmap-cli.stalw.art/install.sh | sh
+    ```
+    Once the installation is completed, the CLI tool will be available in your home directory at ``$HOME/.stalwart/stalwart-cli``. You may add the
+    ``$HOME/.stalwart`` directory to your ``PATH`` environment variable or move the ``stalwart-cli`` binary to a location that is already
+    on your ``PATH`` variable.
+
+- **Windows**: 
+  
+    Download the CLI tool directly from [here](https://github.com/stalwartlabs/jmap-server-cli/releases/latest/download/stalwart-cli-x86_64-pc-windows-msvc.zip).
 
 ## Update password
 

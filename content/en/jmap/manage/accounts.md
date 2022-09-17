@@ -72,8 +72,6 @@ $ stalwart-cli -u https://jmap.example.org account create jdoe@example.org secre
 Account 'jdoe@example.org' successfully created.
 ```
 
-**Note**: The [domain name](/jmap/manage/domains/) has to be created first before any accounts can be added.
-
 ## Display
 
 User account details are obtained using the ``account display`` subcommand. For example:

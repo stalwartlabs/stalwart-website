@@ -23,18 +23,28 @@ tool to manage a Stalwart JMAP server.
 
 ## Installation
 
-On **Linux**, **MacOS** and **Raspberry Pi** install the CLI tool by running the following in your terminal:
+The CLI tool should be aleady installed on the server where Stalwart JMAP server is running at 
+``/usr/local/stalwart-jmap/bin/stalwart-cli``. 
+If you would like to install the CLI on a different computer, follow the instructions for 
+your platform below:
 
-```bash
-curl --proto '=https' --tlsv1.2 -sSf https://jmap-cli.stalw.art/install.sh | sh
-```
+- **Linux / MacOS**: 
 
-On **Windows** download the CLI tool directly from [here](https://github.com/stalwartlabs/jmap-server-cli/releases/latest/download/stalwart-cli-x86_64-pc-windows-msvc.zip).
+    ```bash
+    curl --proto '=https' --tlsv1.2 -sSf https://jmap-cli.stalw.art/install.sh | sh
+    ```
+    Once the installation is completed, the CLI tool will be available in your home directory at ``$HOME/.stalwart/stalwart-cli``. You may add the
+    ``$HOME/.stalwart`` directory to your ``PATH`` environment variable or move the ``stalwart-cli`` binary to a location that is already
+    on your ``PATH`` variable.
+
+- **Windows**: 
+  
+    Download the CLI tool directly from [here](https://github.com/stalwartlabs/jmap-server-cli/releases/latest/download/stalwart-cli-x86_64-pc-windows-msvc.zip).
 
 ## Usage
 
-The default location of the Stalwart CLI is ``$HOME/.stalwart/stalwart-cli`` and when executed
-without any parameters it prints a brief help page such as this one:
+The default location of the Stalwart CLI is ``/usr/local/stalwart-jmap/bin/stalwart-cli`` (or ``$HOME/.stalwart/stalwart-cli``
+when installed manually). When executed without any parameters, the CLI tool prints a brief help page such as this one:
 
 ```bash
 $ stalwart-cli
