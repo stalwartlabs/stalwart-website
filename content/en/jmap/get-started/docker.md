@@ -32,11 +32,12 @@ docker run -d -ti -p 443:8080 -p 11200:11200 \
            --encryption-key=<RANDOM_KEY>
 ```
 
-Make sure to:
+Before starting the container, make sure to:
 - Replace ``<BASE_PATH>`` with the directory on the Docker host where the Stalwart JMAP data will reside.
 - Replace ``<JMAP_HOSTNAME>`` with your server's hostname, for example jmap.example.org.
 - Replace ``<RANDOM_KEY>`` with a random string of at least 64 characters.
 - Store your TLS certificate under ``<BASE_PATH>/jmap.crt`` and the private key under ``<BASE_PATH>/jmap.key``.
+- Execute ``sudo chown -R 1000:1000 <BASE_PATH>``.
 
 If everything is correct, you should now be able to access the OAuth login screen at ``https://JMAP_HOSTNAME/auth``.
 

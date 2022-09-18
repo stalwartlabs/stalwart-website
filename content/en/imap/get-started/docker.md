@@ -32,10 +32,11 @@ docker run -d -ti -p 143:1443 -p 993:1993 \
            --cache-dir=/usr/local/stalwart-imap/data
 ```
 
-Make sure to:
+Before starting the container, make sure to:
 - Replace ``<BASE_PATH>`` with the directory on the Docker host where the Stalwart IMAP data will reside.
 - Replace ``<JMAP_HOSTNAME>`` with your JMAP server's hostname, for example jmap.example.org.
-- Store your TLS certificate under ``<BASE_PATH>/imap.crt`` and the private key under ``<BASE_PATH>/imap.key``. 
+- Store your TLS certificate under ``<BASE_PATH>/imap.crt`` and the private key under ``<BASE_PATH>/imap.key``.
+- Execute ``sudo chown -R 1000:1000 <BASE_PATH>``.
 
 If everything is correct, you should now be able to connect with an IMAP4 client
 on ports 143 or 993 (TLS).
