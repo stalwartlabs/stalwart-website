@@ -18,7 +18,7 @@ toc: true
 
 Before you can run the Stalwart JMAP Docker container, you are going to need a TLS certificate. 
 If you currently don't have one, you can obtain a free TLS certificate from [Let's Encrypt](https://letsencrypt.org/).
-One you have your certificate ready, execute in your terminal:
+Once you have your certificate ready, execute in your terminal:
 
 ```bash
 docker run -d -ti -p 443:8080 -p 11200:11200 \
