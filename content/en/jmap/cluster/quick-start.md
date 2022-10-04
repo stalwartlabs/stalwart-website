@@ -40,7 +40,7 @@ to failures, at least 3 nodes are required.
 There are three required parameters to start a cluster: ``encryption-key``, ``seed-nodes`` and ``rpc-advertise-addr``. These parameters
 are covered in detail in the following sections but, as a quick example, let's say you have three Stalwart JMAP nodes
 running on IP addresses ``192.168.0.101`` (node 1), ``192.168.0.102`` (node 2) and ``192.168.0.103`` (node 3).
-To set up the cluster make sure you use the same ``encription-key`` value on all nodes, then set the ``rpc-advertise-addr`` to the server's
+To set up the cluster make sure you use the same ``encryption-key`` value on all nodes, then set the ``rpc-advertise-addr`` to the server's
 IP address and configure on each node the ``seed-nodes`` parameter to include one or multiple IP addresses of the other nodes in the cluster, for example:
 
 - Node 1:

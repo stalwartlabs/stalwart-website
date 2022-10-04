@@ -62,7 +62,7 @@ All tokens issued by Stalwart JMAP are cryptographically signed using a mechanis
 [PASETO security tokens](https://paseto.io/):
 
 - An **encryption key** is derived using the [BLAKE3](https://en.wikipedia.org/wiki/BLAKE_(hash_function)#BLAKE3)
-  cryptographic hash function combining the principal encription key (configurable with the `encryption-key`
+  cryptographic hash function combining the principal encryption key (configurable with the `encryption-key`
   parameter) with the device id, the expiration time, account details and an [Argon2](https://en.wikipedia.org/wiki/Argon2)
   hash of the JMAP account's password.
 - A **nonce** is generated using a BLAKE3 hash of the user details and the expiration time of the token.
@@ -78,10 +78,10 @@ parameter, for example:
 encryption-key: sDRvvROsJmRUnjIfcUiDUSaAxdQpfixuLvdwlSffptaxUnSQZALenZSYUPQQByUI
 ```
 
-It is imporant to be aware that:
+It is important to be aware that:
 
-- If the encription key is changed, all existing OAuth tokens will be **immediately revoked**.
-- On distributed systems, all nodes have to use the **exact same encription key**. Otherwise,
+- If the encryption key is changed, all existing OAuth tokens will be **immediately revoked**.
+- On distributed systems, all nodes have to use the **exact same encryption key**. Otherwise,
   tokens issued in one node will not be valid in other nodes.
 - The encryption key **must be kept private**, make sure that only the Stalwart JMAP process
   has access to the configuration file where it is stored. In Unix systems this can be done
