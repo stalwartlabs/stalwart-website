@@ -85,8 +85,8 @@ lmtp-trusted-ips: 192.168.0.1;192.168.0.2
 ## MTA Configuration
 
 A Mail Transport Agent with LMTP support is required in order to receive messages from the Internet. Some MTAs that are known
-to have LMTP capabilities are [Postfix](https://www.postfix.org/), [Exim](https://www.exim.org/), [Sendmail](https://www.sendmail.org/) 
-and [Qmail](https://cr.yp.to/qmail.html) (through an extension).
+to have LMTP capabilities are [Postfix](https://www.postfix.org/), [Exim](https://www.exim.org/), [Sendmail](https://www.sendmail.org/),
+[OpenSMTPD](https://www.opensmtpd.org/) and [Qmail](https://cr.yp.to/qmail.html) (through an extension).
 
 ### Postfix
 
@@ -134,6 +134,23 @@ deny
   !verify = recipient/callout=no_cache  
   domains = +local_domains
   message = invalid recipient
+```
+
+### OpenSMTPD
+
+OpenSMTPD can natively deliver to a local or remote LMTP server. An action has
+to be declared:
+
+```
+action "local_lmtp" lmtp 127.0.0.1:11200 rcpt-to alias <aliases>
+```
+
+and rules will use that action, in that example for local users and for a
+virtual domain accepting incoming emails:
+
+```
+match from local for local action "local_lmtp"
+match from any for domain "example.org" action "local_lmtp"
 ```
 
 ### Sendmail
